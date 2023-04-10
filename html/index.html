@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Red Sprite AI - April 2023</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="data:,">
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+
+			body {
+				background: #f1f4f5;
+				font-family: Inter, sans-serif;
+				font-size: 18px;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			a {
+				color: #2f79ff;
+				text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			.stack {
+				width: 70%;
+				max-width: 1150px;
+				margin: 25px 0 150px 25px;
+				display: flex;
+				align-content: flex-start;
+			}
+
+			.paper {
+				position: relative;
+				flex-shrink: 0;
+				width: 100%;
+
+				background: white;
+				border-radius: 3px;
+				box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, .15);
+				padding: 100px;
+			}
+
+			#paper1 {
+				top: 45px;
+				left: 50px;
+			}
+
+			#paper2 {
+				top: 20px;
+				left: -100%;
+			}
+
+			#paper3 {
+				top: 25px;
+				transform: rotate(-4deg);
+				left: -200%;
+			}
+
+			h1 {
+				font-size: 38px;
+				margin-bottom: 50px;
+			}
+
+			h2 {
+				font-size: 28px;
+				margin-top: 1.5em;
+			}
+
+			p,
+			ol,
+			ul {
+				color: #333;
+				line-height: 1.5em;
+			}
+
+			p {
+				margin: 1.5em 0;
+			}
+
+			ol,
+			ul {
+				margin: .5em 0 .5em 2em;
+			}
+
+			ol li,
+			ul li {
+				margin-left: 1em;
+				margin-bottom: .5em;
+			}
+
+			li ol {
+				list-style-type: lower-alpha;
+			}
+
+			.warn {
+				color: #dd0000;
+			}
+
+			footer {
+				color: #777;
+				font-size: 16px;
+				text-align: center;
+				max-width: 600px;
+				margin: 0 auto 50px;
+			}
+
+			#disclaimer {
+				font-size: 14px;
+				margin-top: 20px;
+				display: inline-block;
+				border-top: 1px solid #ccc;
+				padding: 20px;
+			}
+
+			@media (max-width: 1100px) {
+				.stack {
+					width: 85%;
+				}
+			}
+
+			@media (max-width: 800px) {
+				.stack {
+					margin: 0 0 50px 0;
+					width: 100%;
+				}
+
+				.paper {
+					padding: 50px;
+				}
+
+				#paper1,
+				#paper2 {
+					display: none;
+				}
+
+				#paper3 {
+					left: 0;
+					transform: none;
+					top: 0;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="stack">
+			<div class="paper" id="paper1"></div>
+			<div class="paper" id="paper2"></div>
+			<div class="paper" id="paper3">
+				<h1>
+					Red Sprite AI links!
+				</h1>
+
+				<p>
+					Welcome to our little collection of AI links - external and self hosted tools for testing and experimenting!
+				</p>
+				<h2>Text / Chat</h2>
+				<ul>
+					<li>ChatGPT (Large Language Model generative chat) <a href="https://chat.openai.com/chat">free/paid cloud service</a></li>
+					<li>
+						Dalai <a href="https://github.com/cocktailpeanut/dalai">easy way to run LLaMA and Alpaca on your computer</a> | <a href="https://dalai.redhilltech.uk/">try it here</a>
+						<ul>
+							<li>LLaMA (LLM generative chat) <a href="https://github.com/ggerganov/llama.cpp">LLaMA.cpp open source project</a></li>
+							<li>Alpaca.cpp (LLM generative chat) <a href="https://github.com/antimatter15/alpaca.cpp">open source project to run it locally</a></li>
+						</ul>
+					</li>
+				</ul>
+				<h2>Audio</h2>
+				<ul>
+					<li>Whisper (audio to text) <a href="https://github.com/openai/whisper">source</a> | <a href="https://whisper.redhilltech.uk">try it here</a> (using <a href="https://codeberg.org/pluja/web-whisper/">this web UI</a>)</li>
+					<li>Eleven Labs (text to voice, replicating individual voices from samples) <a href="https://beta.elevenlabs.io/">cloud service</a></li>
+				</ul>
+				<h2>Images (and maybe video)</h2>
+				<ul>
+					<li>DALL-E2 (image generation) <a href="https://openai.com/product/dall-e-2">product page</a> <a href="https://labs.openai.com/">cloud service</a></li>
+					<li>Stable Diffusion (image generation) <a href="https://huggingface.co/spaces/stabilityai/stable-diffusion">cloud service</a> | <a href="https://github.com/AbdBarho/stable-diffusion-webui-docker">UIs in docker</a> | <a href="/stable-diffusion/">try it here</a> | <a href="https://stackdiary.com/stable-diffusion-resources/">some other resources</a></li>
+				</ul>
+				<h2>Other</h2>
+				<ul>
+					<li>Tabby (self hosted Copilot alternative) <a href="https://github.com/TabbyML/tabby">source - requires Nvidia GPU</a></li>
+					<li>Build LLM applications with <a href="https://github.com/hwchase17/langchain">LangChain</a></li>
+					<li>Ecosystem of open source chatbots - <a href="https://github.com/nomic-ai/gpt4all">gpt4all</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<footer>
+			Created for Red Sprite, April 2023.
+			<br>
+			<div id="disclaimer">Use at your own risk!</div>
+		</footer>
+
+	</body>
+</html>
